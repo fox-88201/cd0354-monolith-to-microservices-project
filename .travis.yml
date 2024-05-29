@@ -25,17 +25,17 @@ script:
   - docker build -t reverseproxy ./udagram-reverseproxy
 
   ## Tagging
-  - docker tag udagram-api-feed fox-88201/udagram-api-feed
-  - docker tag udagram-api-user fox-88201/udagram-api-user
-  - docker tag udagram-frontend fox-88201/udagram-frontend
-  - docker tag reverseproxy fox-88201/reverseproxy
+  - docker tag udagram-api-feed callmefox/udagram-api-feed
+  - docker tag udagram-api-user callmefox/udagram-api-user
+  - docker tag udagram-frontend callmefox/udagram-frontend
+  - docker tag reverseproxy callmefox/reverseproxy
 
 after_success:
   - echo Tuan1234@ | docker login -u callmefox --password-stdin
   ## Push
-  - docker push fox-88201/udagram-api-feed
-  - docker push fox-88201/udagram-api-user
-  - docker push fox-88201/udagram-frontend
-  - docker push fox-88201/reverseproxy
+  - docker push callmefox/udagram-api-feed
+  - docker push callmefox/udagram-api-user
+  - docker push callmefox/udagram-frontend
+  - docker push callmefox/reverseproxy
 
 ## Do similar for other three images
